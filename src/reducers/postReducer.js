@@ -5,11 +5,12 @@ const initialState ={
 }
 
 export default function(state=initialState, action ){
-    console.log("start post reducer...");
+    //console.log("start post reducer...");
     switch(action.type){        
         case FETCH_POSTS:
             return {
-                ...state
+                ...state,
+                items: action.payload
             }
         default:
             return state;
